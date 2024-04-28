@@ -25,6 +25,21 @@ body {
   h1 {
     align-items: center;
   }
+/* Pour les écrans de taille maximale de 768 pixels */
+@media screen and (max-width: 768px) {
+    /* Ajoutez vos styles CSS pour les écrans de taille maximale de 768 pixels ici */
+}
+
+/* Pour les écrans de taille maximale de 1024 pixels */
+@media screen and (max-width: 1024px) {
+    /* Ajoutez vos styles CSS pour les écrans de taille maximale de 1024 pixels ici */
+}
+
+/* Pour les écrans de taille maximale de 1440 pixels */
+@media screen and (max-width: 1440px) {
+    /* Ajoutez vos styles CSS pour les écrans de taille maximale de 1440 pixels ici */
+}
+
   
   ul {
     list-style-type: none;
