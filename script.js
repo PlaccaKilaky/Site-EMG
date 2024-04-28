@@ -70,4 +70,12 @@ document.addEventListener("DOMContentLoaded", function() {
   
     showSlides(); // Démarrer le carrousel au chargement de la page
   });
-  
+  // Sélectionnez le bouton de menu et la liste de navigation
+const menuBtn = document.querySelector('.menu-btn');
+const navList = document.querySelector('nav ul');
+
+// Ajoutez un écouteur d'événements pour le clic sur le bouton de menu
+menuBtn.addEventListener('click', () => {
+  // Basculez la classe 'active' sur la liste de navigation
+  navList.classList.toggle('active');
+});
