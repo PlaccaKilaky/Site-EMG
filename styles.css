@@ -550,45 +550,44 @@ body {
   nav li a:hover {
     color: #fff; /* Changement de couleur au survol */
 }
-/* Media query pour les écrans de taille maximale de 768px (tablettes et téléphones) */
-@media screen and (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Changer la direction du flexbox en colonne */
-        align-items: center; /* Centrer horizontalement */
-    }
+/* Styles pour les petits écrans (jusqu'à 678px de largeur) */
+@media screen and (max-width: 678px) {
+  nav {
+    flex-direction: column; /* Mettre les éléments de la barre de navigation en colonne */
+    align-items: flex-start; /* Aligner les éléments sur le côté gauche */
+    padding: 10px; /* Réduire l'espace autour des éléments */
+  }
+  
+  nav img {
+    margin-right: 0; /* Supprimer la marge à droite de l'image */
+    margin-bottom: 10px; /* Ajouter un peu d'espace en bas de l'image */
+  }
+  
+  ul {
+    text-align: center; /* Centrer les éléments de la liste */
+  }
+  
+  li {
+    display: block; /* Afficher les éléments de la liste en bloc */
+    margin-bottom: 10px; /* Ajouter de l'espace entre les éléments de la liste */
+  }
+  
+  li::after {
+    display: none; /* Masquer la ligne verticale entre les éléments */
+  }
 
-    nav img {
-        margin-right: 0; /* Supprimer la marge à droite de l'image */
-        margin-bottom: 10px; /* Ajouter une marge en bas de l'image */
-    }
+  /* Styles spécifiques pour le titre h1 */
+  h1 {
+    text-align: center; /* Centrer le texte */
+    font-size: 24px; /* Réduire la taille de la police */
+  }
 
-    ul {
-        text-align: center; /* Centrer le texte */
-    }
-
-    li {
-        display: block; /* Afficher les éléments sur une seule colonne */
-        margin-bottom: 10px; /* Ajouter une marge en bas */
-    }
-
-    h1 {
-        margin-top: 50px; /* Réduire la marge en haut */
-    }
-
-    .header {
-        width: 100%; /* Largeur de 100% pour s'adapter à l'écran */
-        max-width: none; /* Supprimer la largeur maximale */
-        padding: 10px; /* Ajouter un peu de marge intérieure */
-    }
-
-    .carousel .list .item .content {
-        width: 100%; /* Largeur de 100% pour s'adapter à l'écran */
-        max-width: none; /* Supprimer la largeur maximale */
-        padding-right: 0; /* Supprimer le rembourrage à droite */
-        text-align: center; /* Centrer le texte */
-    }
-
-    .carousel .list .item .content .title {
-        font-size: 30px; /* Réduire la taille de la police */
-    }
+  /* Styles spécifiques pour le contenu du carousel */
+  .carousel .list .item .content {
+    top: 10%; /* Ajuster la position verticale */
+    width: 90%; /* Utiliser la largeur presque complète */
+    padding-right: 0; /* Supprimer le padding droit */
+    left: 5%; /* Centrer horizontalement */
+  }
 }
+
