@@ -615,4 +615,22 @@ body {
     display: none; /* Masquer la ligne verticale entre les éléments */
   }
 }
+/* Styles pour la liste de navigation lorsqu'elle est repliée */
+nav ul {
+  display: none; /* Masquer la liste de navigation par défaut */
+}
+
+/* Styles pour la liste de navigation lorsqu'elle est affichée en tant que menu déroulant */
+nav ul.active {
+  display: block; /* Afficher la liste de navigation lorsqu'elle a la classe 'active' */
+}
+
+/* Styles pour le bouton de menu */
+.menu-btn {
+  display: block; /* Afficher le bouton de menu */
+  background: none; /* Supprimer l'arrière-plan */
+  border: none; /* Supprimer les bordures */
+  font-size: 20px; /* Ajuster la taille de la police */
+  cursor: pointer; /* Définir le curseur sur pointer */
+}
 
