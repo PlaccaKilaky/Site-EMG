@@ -70,12 +70,13 @@ document.addEventListener("DOMContentLoaded", function() {
   
     showSlides(); // Démarrer le carrousel au chargement de la page
   });
-  // Sélectionnez le bouton de menu et la liste de navigation
-const menuBtn = document.querySelector('.menu-btn');
-const navList = document.querySelector('nav ul');
+// Sélection du bouton du menu et du menu lui-même
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
 
-// Ajoutez un écouteur d'événements pour le clic sur le bouton de menu
-menuBtn.addEventListener('click', () => {
-  // Basculez la classe 'active' sur la liste de navigation
-  navList.classList.toggle('active');
+// Ajout d'un écouteur d'événement sur le bouton du menu
+menuToggle.addEventListener('click', function() {
+  // Basculement de la classe 'active' sur le menu
+  menu.classList.toggle('active');
 });
+  
