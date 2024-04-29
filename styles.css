@@ -550,87 +550,364 @@ body {
   nav li a:hover {
     color: #fff; /* Changement de couleur au survol */
 }
-/* Styles pour les petits écrans (jusqu'à 678px de largeur) */
-@media screen and (max-width: 678px) {
+/* Media query pour les écrans de taille maximale de 768px (tablettes et téléphones) */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Changer la direction du flexbox en colonne */
+        align-items: center; /* Centrer horizontalement */
+    }
+
+    nav img {
+        margin-right: 0; /* Supprimer la marge à droite de l'image */
+        margin-bottom: 10px; /* Ajouter une marge en bas de l'image */
+    }
+
+    ul {
+        text-align: center; /* Centrer le texte */
+    }
+
+    li {
+        display: block; /* Afficher les éléments sur une seule colonne */
+        margin-bottom: 10px; /* Ajouter une marge en bas */
+    }
+
+    h1 {
+        margin-top: 50px; /* Réduire la marge en haut */
+    }
+
+    .header {
+        width: 100%; /* Largeur de 100% pour s'adapter à l'écran */
+        max-width: none; /* Supprimer la largeur maximale */
+        padding: 10px; /* Ajouter un peu de marge intérieure */
+    }
+
+    .carousel .list .item .content {
+        width: 100%; /* Largeur de 100% pour s'adapter à l'écran */
+        max-width: none; /* Supprimer la largeur maximale */
+        padding-right: 0; /* Supprimer le rembourrage à droite */
+        text-align: center; /* Centrer le texte */
+    }
+
+    .carousel .list .item .content .title {
+        font-size: 30px; /* Réduire la taille de la police */
+    }
+}
+/* Styles pour la section d'actualités */
+.actualites {
+  background-color: #f8f8f8;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Styles pour le titre des actualités */
+.actualites h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Styles pour la liste des actualités */
+.actualites ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Styles pour les éléments de la liste des actualités */
+.actualites li {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Styles pour les liens des actualités */
+.actualites a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Styles pour les liens des actualités au survol */
+.actualites a:hover {
+  text-decoration: underline;
+  color: #bA4BA8;
+}
+/* Styles pour le menu déroulant */
+.menu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Styles pour afficher le menu déroulant lorsque le bouton est cliqué */
+.menu.active {
+  display: flex;
+}
+
+/* Media query pour activer le menu déroulant sur les écrans plus petits */
+@media screen and (max-width: 430px) {
   nav {
-    flex-direction: column; /* Mettre les éléments de la barre de navigation en colonne */
-    align-items: flex-start; /* Aligner les éléments sur le côté gauche */
-    padding: 10px; /* Réduire l'espace autour des éléments */
-  }
-  
-  nav img {
-    margin-right: 0; /* Supprimer la marge à droite de l'image */
-    margin-bottom: 10px; /* Ajouter un peu d'espace en bas de l'image */
-  }
-  
-  ul {
-    text-align: center; /* Centrer les éléments de la liste */
-  }
-  
-  li {
-    display: block; /* Afficher les éléments de la liste en bloc */
-    margin-bottom: 10px; /* Ajouter de l'espace entre les éléments de la liste */
-  }
-  
-  li::after {
-    display: none; /* Masquer la ligne verticale entre les éléments */
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  /* Styles spécifiques pour le titre h1 */
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+}
+/* Ajoutez ce CSS pour styliser les images des actualités */
+.actualites img {
+  width: 100px; /* Ajustez la largeur des images selon vos besoins */
+  height: auto; /* Gardez le ratio hauteur/largeur */
+  margin-right: 10px; /* Ajoutez un peu d'espace entre l'image et le texte */
+}
+/* Ajoutez ces règles CSS à votre fichier styles.css */
+
+/* Styles généraux */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Styles pour le fond blanc */
+body {
+  background-color: #fff;
+}
+
+/* Styles pour la barre de navigation */
+nav {
+  background-color: #bA4BA8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+nav img {
+  width: 50px;
+  height: auto;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Styles pour le bouton de recherche */
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-container button[type="submit"] {
+  padding: 10px;
+  border: none;
+  background-color: #bA4BA8;
+  color: #fff;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+/* Styles pour le carousel */
+.carousel {
+  margin-top: 70px; /* Ajustez la marge supérieure pour laisser de la place pour la barre de navigation */
+}
+
+/* Styles pour le titre */
+h1 {
+  text-align: center;
+  margin-top: 50px; /* Ajoutez de la marge au-dessus du titre */
+}
+
+/* Styles pour les compteurs */
+.counter-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px; /* Ajoutez de la marge au-dessus du conteneur de compteurs */
+}
+
+/* Styles pour la section Actualités */
+.actualites {
+  margin-top: 50px; /* Ajoutez de la marge au-dessus de la section Actualités */
+}
+
+.actualites h2 {
+  text-align: center;
+}
+
+.actualites ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.actualites li {
+  margin-bottom: 20px;
+}
+
+.actualites img {
+  max-width: 100%;
+}
+
+/* Media queries pour la mise en page responsive */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+}
+/* Ajoutez ces règles CSS à votre fichier styles.css */
+
+/* Styles pour le titre h1 */
+h1 {
+  font-size: 5vw; /* Taille de police basée sur la largeur de la fenêtre */
+}
+
+/* Styles pour les éléments de la section Actualités */
+.actualites h2 {
+  font-size: 3vw; /* Taille de police basée sur la largeur de la fenêtre */
+}
+
+.actualites a {
+  font-size: 2vw; /* Taille de police basée sur la largeur de la fenêtre */
+}
+
+.actualites li {
+  font-size: 1.5vw; /* Taille de police basée sur la largeur de la fenêtre */
+}
+
+/* Media queries pour la mise en page responsive */
+@media screen and (max-width: 768px) {
+  /* Réglez la taille du titre h1 pour les écrans plus petits */
   h1 {
-    text-align: center; /* Centrer le texte */
-    font-size: 24px; /* Réduire la taille de la police */
+    font-size: 8vw;
   }
 
-  /* Styles spécifiques pour le contenu du carousel */
-  .carousel .list .item .content {
-    top: 10%; /* Ajuster la position verticale */
-    width: 90%; /* Utiliser la largeur presque complète */
-    padding-right: 0; /* Supprimer le padding droit */
-    left: 5%; /* Centrer horizontalement */
+  /* Réglez la taille du texte de la section Actualités pour les écrans plus petits */
+  .actualites h2 {
+    font-size: 4vw;
+  }
+
+  .actualites a {
+    font-size: 3vw;
+  }
+
+  .actualites li {
+    font-size: 2vw;
   }
 }
-/* Styles pour les petits écrans (jusqu'à 678px de largeur) */
-@media screen and (max-width: 678px) {
+/* Ajoutez ces règles CSS à votre fichier styles.css */
+
+nav {
+  height: 60px; /* Hauteur de la barre de navigation */
+  padding: 10px; /* Espace intérieur de la barre de navigation */
+  display: flex; /* Utiliser un modèle de boîte flexible */
+  align-items: center; /* Centrer verticalement les éléments */
+}
+
+nav img {
+  max-height: 100%; /* Assurez-vous que l'image ne dépasse pas la hauteur de la barre */
+  margin-right: 10px; /* Ajoutez un peu d'espace entre l'image et le texte */
+}
+
+ul.menu {
+  list-style-type: none; /* Supprimer les puces de la liste */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Utiliser un modèle de boîte flexible pour les éléments de la liste */
+}
+
+ul.menu li {
+  margin-right: 20px; /* Espacement entre les éléments de la liste */
+  white-space: nowrap; /* Empêcher le texte de passer à la ligne */
+  overflow: hidden; /* Masquer le texte dépassant */
+  text-overflow: ellipsis; /* Ajouter des points de suspension pour indiquer que le texte est tronqué */
+}
+
+.menu-toggle {
+  display: none; /* Masquer le bouton de menu par défaut */
+}
+
+/* Media query pour les petits écrans */
+@media screen and (max-width: 768px) {
   nav {
-    flex-direction: column; /* Afficher les éléments de la barre de navigation en colonne */
-    align-items: center; /* Centrer horizontalement les éléments */
-    padding: 10px; /* Ajouter de l'espace autour des éléments */
+    height: auto; /* Rétablir la hauteur automatique pour les petits écrans */
   }
 
   nav img {
-    margin-bottom: 10px; /* Ajouter un espace en bas de l'image */
+    max-height: 40px; /* Ajuster la hauteur maximale de l'image pour les petits écrans */
   }
 
-  ul {
-    text-align: center; /* Centrer les éléments de la liste */
+  ul.menu {
+    display: none; /* Masquer la liste de navigation par défaut sur les petits écrans */
   }
 
-  li {
-    display: block; /* Afficher les éléments de la liste en bloc */
-    margin-bottom: 10px; /* Ajouter de l'espace entre les éléments */
+  ul.menu.active {
+    display: flex; /* Afficher la liste de navigation lorsque le menu est activé */
+    flex-direction: column; /* Empiler les éléments verticalement */
+    position: absolute; /* Positionner la liste au-dessus du bouton de menu */
+    top: 50px; /* Définir la position verticale */
+    left: 0; /* Définir la position horizontale */
+    background-color: #bA4BA8; /* Ajouter un arrière-plan */
+    width: 100%; /* Utiliser toute la largeur de l'écran */
+    padding: 10px; /* Ajouter un peu d'espace intérieur */
+    box-sizing: border-box; /* Inclure le rembourrage dans la largeur */
   }
 
-  li::after {
-    display: none; /* Masquer la ligne verticale entre les éléments */
+  ul.menu.active li {
+    margin-right: 0; /* Réinitialiser la marge sur les petits écrans */
+    margin-bottom: 10px; /* Ajouter un espacement entre les éléments */
+  }
+
+  .menu-toggle {
+    display: block; /* Afficher le bouton de menu pour les petits écrans */
   }
 }
-/* Styles pour la liste de navigation lorsqu'elle est repliée */
-nav ul {
-  display: none; /* Masquer la liste de navigation par défaut */
-}
-
-/* Styles pour la liste de navigation lorsqu'elle est affichée en tant que menu déroulant */
-nav ul.active {
-  display: block; /* Afficher la liste de navigation lorsqu'elle a la classe 'active' */
-}
-
-/* Styles pour le bouton de menu */
-.menu-btn {
-  display: block; /* Afficher le bouton de menu */
-  background: none; /* Supprimer l'arrière-plan */
-  border: none; /* Supprimer les bordures */
-  font-size: 20px; /* Ajuster la taille de la police */
-  cursor: pointer; /* Définir le curseur sur pointer */
-}
-
