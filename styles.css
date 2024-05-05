@@ -34,9 +34,7 @@ body {
     text-align: right; /* Aligner le texte à droite */
   }
   
-  li {
-    display: inline-block; /* Afficher les éléments sur la même ligne */
-  }
+  
   
   li a {
     display: block;
