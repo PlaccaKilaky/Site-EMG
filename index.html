@@ -4,122 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EM-GABON UNIVERSITE</title>
+  <!-- Ajoutez cette ligne pour spécifier l'icône de l'onglet -->
   <link rel="icon" href="EMG-Univ.png" type="image/png">
+  <!-- Lien vers le fichier CSS -->
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Style pour la barre de navigation */
-    nav {
-      background-color: #007bff;
-      color: #fff;
-      padding: 10px 20px;
-    }
-
-    nav img {
-      width: 100px;
-      height: auto;
-    }
-
-    .menu-toggle {
-      display: none;
-    }
-
-    .menu {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .menu li {
-      display: inline-block;
-      margin-right: 20px;
-    }
-
-    .menu a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* Style pour la section de contenu */
-    .content {
-      padding: 20px;
-    }
-
-    .content h1 {
-      text-align: center;
-    }
-
-    .counter-container {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 30px;
-    }
-
-    .counter {
-      text-align: center;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-radius: 10px;
-    }
-
-    .counter h3 {
-      margin-top: 10px;
-      color: #333;
-    }
-
-    .counter img {
-      display: block;
-      margin: 0 auto;
-      width: 50px;
-      height: 50px;
-    }
-
-    .green {
-      background-color: #28a745;
-      color: #fff;
-    }
-
-    /* Style pour la section d'actualités */
-    .actualites {
-      background-color: #f9f9f9;
-      padding: 20px;
-      margin-top: 20px;
-      border-radius: 10px;
-    }
-
-    .actualites h2 {
-      color: #333;
-    }
-
-    .actualites ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .actualites li {
-      margin-bottom: 10px;
-    }
-
-    .actualites img {
-      width: 100px;
-      height: 100px;
-      border-radius: 5px;
-      margin-right: 10px;
-    }
-
-    .actualites a {
-      color: #007bff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
 </head>
-<body>
+<body background-color ="white">
+  <!-- Barre de navigation -->
   <nav>
+    <!-- Logo de l'université, lié à la page d'accueil -->
     <a href="index.html">
       <img src="EMG-Univ.png" alt="Logo de l'EM-GABON UNIVERSITE">
     </a>
+    <!-- Bouton pour le menu déroulant -->
     <button class="menu-toggle">Menu</button>
+    <!-- Liste des liens du menu -->
     <ul class="menu">
       <li><a href="#">Accueil</a></li>
       <li><a href="#">Futurs étudiants</a></li>
@@ -128,78 +27,92 @@
       <li><a href="#">Vie au Campus</a></li>
       <li><a href="#">L'EM-GABON UNVIVERSITE</a></li>
     </ul>
+    <!-- Barre de recherche -->
     <div class="search-container">
       <input type="text" placeholder="Rechercher...">
       <button type="submit"><img src="loupe..png" alt="Rechercher"></button>
     </div>
   </nav>
 
-  <div class="content">
-    <div class="carousel">
-      <div class="list">
-        <div class="item">
-          <img src="IMG-20240427-WA0005.jpg">
-          <div class="content">
-            <div class="author">EM-GABON UNIVERSITE</div>
-            <div class="title">Quand Formation</div>
-            <div class="topic">Rime avec Emploie</div>
-            <div class="des">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
-            </div>
-            <div class="buttons">
-              <button>En savoir plus</button>
-            </div>
+  <!-- Carousel pour afficher des images avec des descriptions -->
+  <div class="carousel">
+    <!-- Liste des éléments du carousel -->
+    <div class="list">
+      <!-- Item du carousel -->
+      <div class="item">
+        <!-- Image -->
+        <img src="IMG-20240427-WA0005.jpg">
+        <div class="content">
+          <!-- Titre, auteur, sujet et description de l'élément -->
+          <div class="author">EM-GABON UNIVERSITE</div>
+          <div class="title">Quand Formation</div>
+          <div class="topic">Rime avec Emploie</div>
+          <div class="des">
+            <!-- Lorem ipsum -->
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
+          </div>
+          <!-- Bouton "En savoir plus" -->
+          <div class="buttons">
+            <button>En savoir plus</button>
           </div>
         </div>
-        <!-- Autres éléments du carousel -->
       </div>
-      <div class="thumbnail">
-        <!-- Miniatures -->
-        <div class="item">
-          <img src="IMG-20240427-WA0008.jpg">
-          <div class="content">
-            <div class="title">Name Slider</div>
-            <div class="description">Description</div>
-          </div>
+      <!-- Les autres éléments de l'item suivent le même schéma -->
+    </div>
+    <!-- Liste des miniatures pour naviguer dans le carousel -->
+    <div class="thumbnail">
+      <!-- Miniatures des éléments -->
+      <div class="item">
+        <img src="IMG-20240427-WA0008.jpg">
+        <div class="content">
+          <div class="title">Name Slider</div>
+          <div class="description">Description</div>
         </div>
-        <!-- Autres miniatures -->
       </div>
-      <!-- Flèches et temps -->
-      <div class="arrows">
-        <button id="prev"><</button>
-        <button id="next">></button>
-      </div>
-      <div class="time"></div>
+      <!-- Les autres miniatures suivent le même schéma -->
     </div>
-
-    <h1>L'EM-GABON EN CHIFFRES</h1>
-    <div class="counter-container">
-      <div id="leftCounter" class="counter">
-        <img src="icone université.png" alt="School Icon">
-        7 <h3>Composantes</h3>
-      </div>
-      <div id="centerCounter" class="counter">
-        <img src="Etudiants.png" alt="Person Icon">
-        10000 <h3>Etudiants</h3>
-      </div>
-      <div class="counter green">
-        <img src="filiere.png" alt="Road Sign Icon">
-        68 <h3>Filieres</h3>
-      </div>
+    <!-- Flèches pour naviguer dans le carousel -->
+    <div class="arrows">
+      <button id="prev"><</button>
+      <button id="next">></button>
     </div>
-
-    <section class="actualites">
-      <h2>Actualités</h2>
-      <ul>
-        <li>
-          <img src="429792493_933451815031524_6706425399008170062_n.jpg" alt="Image Actualité 1">
-          <a href="#">Nouvel article publié</a>
-        </li>
-        <!-- Autres actualités -->
-      </ul>
-    </section>
+    <!-- Temps d'exécution du carousel -->
+    <div class="time"></div>
   </div>
 
+  <!-- Titre et conteneur pour les compteurs -->
+  <h1>L'EM-GABON EN CHIFFRES</h1>
+  <div class="counter-container">
+    <!-- Compteurs -->
+    <div id="leftCounter" class="counter">
+      <img src="icone université.png" alt="School Icon">
+      7 <h3>Composantes</h3>
+    </div>
+    <div id="centerCounter" class="counter">
+      <img src="Etudiants.png" alt="Person Icon">
+      10000 <h3>Etudiants</h3>
+    </div>
+    <div class="counter green">
+      <img src="filiere.png" alt="Road Sign Icon">
+      68 <h3>Filieres</h3>
+    </div>
+  </div>
+
+  <!-- Section pour afficher les actualités -->
+  <section class="actualites">
+    <h2>Actualités</h2>
+    <!-- Liste des actualités -->
+    <ul>
+      <li>
+        <!-- Image de l'actualité et lien -->
+        <img src="429792493_933451815031524_6706425399008170062_n.jpg" alt="Image Actualité 1">
+        <a href="#">Nouvel article publié</a>
+      </li>
+      <!-- Les autres actualités suivent le même schéma -->
+    </ul>
+  </section>
+
+  <!-- Script JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
